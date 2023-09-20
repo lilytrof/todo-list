@@ -122,7 +122,9 @@ const clearItemEntryField = () => {
 };
 
 const setFocusOnItemEntry = () => {
-  document.getElementById("addNewTask__input").focus();
+  if (document.body.clientWidth >= 1024) {
+    document.getElementById("addNewTask__input").focus();
+  }
 };
 
 const refreshThePage = () => {
