@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+  <div class="toDoList">
+    <section class="toDoList__section addNewTask">
+      <form id="itemEntryForm" class="addNewTask__form">
+        <label class="addNewTask__label" for="addNewTask__input">Enter a new to do item</label>
+        <input id="addNewTask__input" class="addNewTask__input input" type="text" size="40" autocomplete="off" placeholder="Add item" tabindex="0">
+        <button class="addNewTask__btn btn" type="submit" title="Add new item" aria-label="Add new item to list" tabindex="0">+</button>
+      </form>
+    </section>
+    <section class="toDoList__section tasksContainer">
+      <div class="tasksContainer__top">
+        <h1 class="tasksContainer__title" tabindex="0">To Do List</h1>
+      </div>
+      <div id="tasksContainer__tasks" class="tasksContainer__tasks"></div>
+    </section>
+    <section class="toDoList__section clearTasks">
+      <button class="btn" id="clearItemsBtn" title="Clear the list" aria-label="Remove all items from the list"
+              tabindex="0">clear
+      </button>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="aboutMe">
+    <a class="aboutMe__myGitHub" href="https://lilytrof.github.io/todo-list/todo-list/">
+      <i class="bi bi-github"></i>
+      <p>lilytrof</p>
+    </a>
+    <p>2023</p>
+  </div>
+</footer>
+<script src="src/index.js" type="module"></script>
+</body>
+</html>

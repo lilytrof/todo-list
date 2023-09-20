@@ -1,0 +1,25 @@
+.clearTasks {
+  border: none;
+  width: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+#clearItemsBtn {
+  cursor: pointer;
+  background: $main-bgcolor;
+  border: none;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+  padding: 14px 30px;
+  border: $border;
+  border-radius: $border-radius;
+  transition: 0.1s;
+  margin-top: 1.2rem;
+
+  &:hover {
+    background-color: #ff6969;
+  }
+}

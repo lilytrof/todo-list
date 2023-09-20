@@ -1,0 +1,123 @@
+.tasksContainer {
+  min-height: 50vh;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0 6px 0 0 rgba(19, 19, 28, 1);
+
+  &__top {
+    background-color: $accent-color;
+    box-shadow: $box-shadow;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding: 30px 30px 25px 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.2rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: $border;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    &_disabled {
+      background-color: rgba(192, 168, 224, 1);
+    }
+
+    &_edit {
+      background-color: $main-bgcolor;
+    }
+  }
+
+  &__taskText {
+    font-size: 1.3rem;
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    @include mq(768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__checkbox {
+    appearance: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    border-radius: $border-radius;
+    display: grid;
+    border: $border;
+    position: relative;
+
+    &:checked {
+      background-color: $accent-color;
+    }
+
+    &::before {
+      content: "";
+      width: 36px;
+      height: 27.586px;
+      transform: scale(0);
+      background: url("../img/check.svg") no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 16%;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+      @include mq(768px) {
+        width: 43.75px;
+        height: 33.525px;
+      }
+    }
+  }
+
+  .bi-trash,
+  .bi-pencil,
+  .bi-pencil-fill {
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding-left: 8px;
+    transition: 0.1s;
+    opacity: 0.3;
+
+    &::before {
+      vertical-align: bottom;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .bi-pencil-fill {
+    opacity: 1;
+  }
+
+  .bi-trash.hide-trash {
+    display: none;
+  }
+
+  .bi-trash.view-trash {
+    display: block;
+  }
+}
