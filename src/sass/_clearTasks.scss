@@ -19,7 +19,13 @@
   transition: 0.1s;
   margin-top: 1.2rem;
 
-  &:hover {
+  &:active {
     background-color: #ff6969;
+  }
+
+  @include mq(1024px) {
+    &:hover {
+      background-color: #ff6969;
+    }
   }
 }

@@ -104,8 +104,14 @@
       vertical-align: bottom;
     }
 
-    &:hover {
+    &:active {
       opacity: 1;
+    }
+
+    @include mq (1024px) {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

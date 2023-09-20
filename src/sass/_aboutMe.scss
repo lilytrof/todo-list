@@ -13,8 +13,14 @@
     gap: 6px;
     transition: 0.1s;
 
-    &:hover {
-      color: $accent-color;
+    &:active {
+        color: $accent-color;
+      }
+
+    @include mq (1024px) {
+      &:hover {
+          color: $accent-color;
+        }
     }
   }
 }
